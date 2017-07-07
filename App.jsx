@@ -1,9 +1,12 @@
 import React from 'react';
 
 class App extends React.Component {
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
+    this.state1 = {
+      header: "Header form state...",
+      "content": "Content from state"
+    }
     this.state = {
       data: [
         {
@@ -42,6 +45,8 @@ class App extends React.Component {
         <p data-myattribte="somevalue">This is the content</p>
         <h3>{1+1}</h3>
 
+        <h1>{this.state1.header}</h1>
+        <h1>{this.state1.content}</h1>
 
         <Header/>
         <table>
